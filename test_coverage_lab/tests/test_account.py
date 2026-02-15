@@ -140,3 +140,29 @@ Each test should include:
 # Student 11: Test deleting an account
 # - Verify that an account can be successfully deleted from the database.
 # Target Method: delete()
+
+# ===========================
+# Test: Account Deletion
+# Author: Joshua Choi
+# Date: 2026-02-13
+# Description: Ensure an account can be removed from the database and is no longer retrievable.
+# ===========================
+
+def test_account_deletion():
+    """Test deleting an account from the database """
+    # Create and save a new account
+    account = Account(name= "Joshua Choi", email="choij47@unlv.nevada.edu", role="user")
+    db.session.add(account)
+    db.session.commit()
+
+    # Retrieve from database
+    retrieved_account = Account.query.filter_by(email="choij47@unlv.nevada.edu").first()
+    assert retrieved_account.role == "user"
+
+    # Delete the account
+    account.delete()
+    db.session.commit()
+
+    # Verifiy it no longer exists in the database 
+    after_delete = Account.query.get(account.id)
+    assert after_delete is None
