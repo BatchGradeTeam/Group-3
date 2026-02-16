@@ -24,6 +24,13 @@ def client():
 class TestCounterEndpoints:
     """Test cases for Counter API"""
 
+    # ===========================
+    # Test: Create New Counter
+    # Author: Tri Tran
+    # Date: 2026-02-15
+    # Description: Ensure a new counter can be created using
+    #   POST /counters/<name> and that it initializes with value 0.
+    # ===========================
     def test_create_new_counter(self, client):
         """POST /counters/<name> should create a counter with initial value 0"""
 
