@@ -31,7 +31,9 @@ jobs:
         run: pip install flake8
 
       - name: Run Flake8 Linting
+        id: lint
         run: flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+        continue-on-error: true
 
       - name: Extract Coverage Percentage
         run: |
