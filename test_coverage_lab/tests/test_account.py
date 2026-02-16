@@ -124,6 +124,27 @@ Each test should include:
 # - Ensure withdrawal fails when balance is insufficient.
 # Target Method: withdraw()
 
+# ===========================
+# Test: Withdrawal with Insufficient Funds
+# Author: Truc Bui
+# Date: 2026-02-15
+# Description: Ensure withdrawal fails when balance is insufficient
+# ===========================
+
+def test_withdrawal_insufficient_funds():
+    """Test withdrawing an amount higher than the balance"""
+    
+    # Make an account with an arbitrary balance greater than 0
+    account = Account(name="Some Money", balance=100)
+
+    # Verify the balance
+    assert account.balance == 100
+
+    # Attempt to withdraw a positive amount higher than the balance
+    with pytest.raises(DataValidationError):
+        # Invalid withdrawal should raise an error
+        account.withdraw(102)
+
 # Student 8: Test password hashing
 # - Ensure passwords are properly hashed.
 # - Verify that password verification works correctly.
