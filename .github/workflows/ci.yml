@@ -24,6 +24,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Extract Coverage Percentage
+        shell: bash
+        run: |
+          PERCENT=$(grep "TOTAL" coverage_log.txt | awk '{print $4}' | sed 's/%//')
+          echo "TOTAL_COVERAGE=$PERCENT" >> $GITHUB_ENV
+
       - name: Run Tests with Pytest
         run: pytest --cov=src --cov-report=term-missing
 
