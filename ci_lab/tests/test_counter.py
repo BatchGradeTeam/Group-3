@@ -309,7 +309,7 @@ class TestCounterEndpoints:
     # Author: Nicholas Martinez
     # Modification: Verify that the error message is clear and indicates that no counters are available.
     # ===========================
-    def test_get_top_n_counters_empty(client):
+    def test_get_top_n_counters_empty(self, client):
         """Test retrieving top N counters when no counters exist"""
         
         client.post('/counters/reset')              # Make sure no counters exist by resetting
