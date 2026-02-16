@@ -7,6 +7,10 @@ import pytest
 from models import db
 from models.account import Account, DataValidationError
 
+# For account validation, I am using regex
+import re 
+EMAIL_REGEX = r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+
 ACCOUNT_DATA = {}
 
 @pytest.fixture(scope="module", autouse=True)
@@ -63,6 +67,9 @@ def test_account_role_assignment():
     account.change_role("admin")
     assert account.role == "admin"
 
+    #Assert email is valid
+    validate_email(account.email)
+
 # ===========================
 # Test: Invalid Role Assignment
 # Author: John Businge
@@ -103,6 +110,15 @@ Each test should include:
 # Student 2: Test invalid email input
 # - Ensure invalid email formats raise a validation error.
 # Target Method: validate_email()
+# Takes in a string for the email, uses regex to validate, regex defined above with import
+# if there is a match then validated true, if not a match then validated false
+# raises data valid error as per the instructions. 
+def validate_email(email: str):
+    if not re.fullmatch(EMAIL_REGEX, email):
+        raise DataValidationError("Invalid Email, validation error, {email}")
+
+
+
 
 # Student 3: Test missing required fields
 # - Ensure account initialization fails when required fields are missing.
