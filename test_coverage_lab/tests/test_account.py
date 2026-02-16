@@ -116,9 +116,22 @@ Each test should include:
 # - Ensure zero or negative deposits are rejected.
 # Target Method: deposit()
 
-# Student 6: Test valid withdrawal
-# - Verify that withdrawing a valid amount correctly decreases the balance.
+# ===========================
+# Test: Valid Withdrawal
+# Author: Nicholas Martinez
+# Date: 2026-02-15
+# Description: Ensure valid balance after a valid withdrawal.
 # Target Method: withdraw()
+# ===========================
+def test_valid_withdrawal():
+    """Test withdrawing a valid amount from the account"""
+    BALANCE = 100.0
+    WITHDRAW = 50.0
+    account = Account(balance=BALANCE)
+
+    # Withdraw a valid amount
+    account.withdraw(WITHDRAW)
+    assert account.balance == BALANCE - WITHDRAW
 
 # Student 7: Test withdrawal with insufficient funds
 # - Ensure withdrawal fails when balance is insufficient.
