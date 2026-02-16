@@ -129,9 +129,28 @@ Each test should include:
 # - Verify that password verification works correctly.
 # Target Methods: set_password() / check_password()
 
-# Student 9: Test account deactivation/reactivation
+# Test: Account deactivation/reactivation
+# Author: Alvin Singo
+# Date: 2026-02-15
+# Description:
 # - Ensure accounts can be deactivated and reactivated correctly.
 # Target Methods: deactivate() / reactivate()
+def test_account_deactivation_reactivation():
+    """Test account deactivation and reactivation"""
+    account = Account(name="Alvin Singo", email="singo@unlv.nevada.edu", role="user")
+
+    # Account.disable is a bool that represents if the account is active
+    # true is account is disabled
+    # falise if account is active.
+
+    # Deactivate the account
+    account.deactivate()
+    assert account.disabled == True
+
+    # Reactivate the account
+    account.reactivate()
+    assert account.disabled == False
+
 
 # Student 10: Test email uniqueness enforcement
 # - Ensure duplicate emails are not allowed.
