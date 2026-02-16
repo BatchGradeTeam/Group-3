@@ -303,3 +303,19 @@ class TestCounterEndpoints:
         assert HTTP_404_NOT_FOUND == HTTPStatus.NOT_FOUND
         assert HTTP_405_METHOD_NOT_ALLOWED == HTTPStatus.METHOD_NOT_ALLOWED
         assert HTTP_409_CONFLICT == HTTPStatus.CONFLICT
+
+    # ===========================
+    # Test: Ensure that retrieving top N counters when no counters exist returns the correct error
+    # Author: Nicholas Martinez
+    # Modification: Verify that the error message is clear and indicates that no counters are available.
+    # ===========================
+    def test_get_top_n_counters_empty(client):
+        """Test retrieving top N counters when no counters exist"""
+        
+        client.post('/counters/reset')              # Make sure no counters exist by resetting
+        response = client.get('/counters/top/5')    # Try to get top 5 counters when none exist
+        
+        # Check the response status code and error message
+        assert response.status_code == HTTPStatus.NOT_FOUND
+        data = response.get_json()
+        assert data['error'] == "No counters available"
