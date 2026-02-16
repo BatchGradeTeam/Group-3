@@ -124,10 +124,39 @@ Each test should include:
 # - Ensure withdrawal fails when balance is insufficient.
 # Target Method: withdraw()
 
-# Student 8: Test password hashing
-# - Ensure passwords are properly hashed.
-# - Verify that password verification works correctly.
-# Target Methods: set_password() / check_password()
+# ===========================
+# Test: Set Password 
+# Author: Jerome Azicate
+# Date: 2026-02-16
+# Description: Ensure passwords are properly hashed and stored properly.
+# ===========================
+def test_set_password():
+    """Test if passwords are properly hashed and stored properly"""
+    account = Account(name="John Doe", email="johndoe@example.com", role="user")
+    account.set_password("johndoe123")
+    
+    # Check if there is a password hash stored
+    assert account.password_hash is not None
+    
+    # Ensure the password hash is not the same as the plaintext password
+    assert account.password_hash != "johndoe123" 
+
+# ===========================
+# Test: Check Password 
+# Author: Jerome Azicate
+# Date: 2026-02-16
+# Description: Ensure password verification works correctly.
+# ===========================
+def test_check_password():
+    """Test that password verification works correctly"""
+    account = Account(name="John Doe", email="johndoe@example.com", role="user")
+    account.set_password("johndoe123")
+
+    # Ensure the correct password is accepted
+    assert account.check_password("johndoe123")
+
+    # Ensure an incorrect password is rejected
+    assert account.check_password("wrongjohndoe123") is False
 
 # Student 9: Test account deactivation/reactivation
 # - Ensure accounts can be deactivated and reactivated correctly.
