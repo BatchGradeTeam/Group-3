@@ -1,0 +1,1 @@
+![Build Status](https://github.com/NicholasAMartinez/Group-3-Nick/actions/workflows/ci.yml/badge.svg)
