@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Filename,Author,DateUTC,Week
 app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,scottyab,2024-09-12T10:16:21Z,481
 app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,grubeli,2021-11-16T14:04:57Z,334
@@ -194,3 +195,46 @@ app/src/androidTest/java/com/scottyab/rootchecker/ApplicationTest.java,scottyab,
 app/src/androidTest/java/com/scottyab/rootchecker/ApplicationTest.java,scottyab,2015-06-19T09:05:10Z,0
 app/src/main/java/com/scottyab/rootchecker/util/QLog.java,scottyab,2015-06-26T15:50:40Z,1
 app/src/main/java/com/scottyab/rootchecker/util/QLog.java,scottyab,2015-06-19T09:05:10Z,0
+=======
+file_path,commit_sha,author,date_utc,commit_html_url,week_start,week_index
+repo_mining/AlvinSingo_CollectFiles.py,41052569ea76f812fdd408a4b9510e5c822a05dc,asingo01,2026-02-03 03:04:20+00:00,https://github.com/BatchGradeTeam/Group-3/commit/41052569ea76f812fdd408a4b9510e5c822a05dc,2026-02-03,1
+repo_mining/AlvinSingo_authorsFileTouches.py,a10c2e8cb2d32eed57e610856f10c44db4687084,asingo01,2026-02-03 03:26:24+00:00,https://github.com/BatchGradeTeam/Group-3/commit/a10c2e8cb2d32eed57e610856f10c44db4687084,2026-02-03,1
+repo_mining/AlvinSingo_authorsFileTouches.py,41052569ea76f812fdd408a4b9510e5c822a05dc,asingo01,2026-02-03 03:04:20+00:00,https://github.com/BatchGradeTeam/Group-3/commit/41052569ea76f812fdd408a4b9510e5c822a05dc,2026-02-03,1
+repo_mining/AlvinSingo_scatterplot.py,a10c2e8cb2d32eed57e610856f10c44db4687084,asingo01,2026-02-03 03:26:24+00:00,https://github.com/BatchGradeTeam/Group-3/commit/a10c2e8cb2d32eed57e610856f10c44db4687084,2026-02-03,1
+repo_mining/AlvinSingo_scatterplot.py,41052569ea76f812fdd408a4b9510e5c822a05dc,asingo01,2026-02-03 03:04:20+00:00,https://github.com/BatchGradeTeam/Group-3/commit/41052569ea76f812fdd408a4b9510e5c822a05dc,2026-02-03,1
+repo_mining/Kosuke_CollectFiles.py,93c6f7dd0bc62c9146c0c11cbc4a9690c50ba002,lAmKosuke,2026-02-03 06:07:23+00:00,https://github.com/BatchGradeTeam/Group-3/commit/93c6f7dd0bc62c9146c0c11cbc4a9690c50ba002,2026-02-03,1
+repo_mining/Kosuke_CollectFiles.py,2f1027d37d1208b823302bf81b7dcbf8268f6ce2,lAmKosuke,2026-02-03 06:04:46+00:00,https://github.com/BatchGradeTeam/Group-3/commit/2f1027d37d1208b823302bf81b7dcbf8268f6ce2,2026-02-03,1
+repo_mining/Kosuke_CollectFiles.py,e2c2e5fb81a6eaf9e2c8b1d75b4eae878bfe88c6,lAmKosuke,2026-02-03 06:03:46+00:00,https://github.com/BatchGradeTeam/Group-3/commit/e2c2e5fb81a6eaf9e2c8b1d75b4eae878bfe88c6,2026-02-03,1
+repo_mining/Kosuke_CollectFiles.py,c04e37fbd52922c23b2bcfd74c2e7ce932f58a73,lAmKosuke,2026-02-03 05:32:01+00:00,https://github.com/BatchGradeTeam/Group-3/commit/c04e37fbd52922c23b2bcfd74c2e7ce932f58a73,2026-02-03,1
+repo_mining/Kosuke_CollectFiles.py,1c349e82dd0e59c82e19529c7bba65f8b0f52108,lAmKosuke,2026-02-03 03:35:00+00:00,https://github.com/BatchGradeTeam/Group-3/commit/1c349e82dd0e59c82e19529c7bba65f8b0f52108,2026-02-03,1
+repo_mining/Kosuke_authorsFileTouches.py,2f1027d37d1208b823302bf81b7dcbf8268f6ce2,lAmKosuke,2026-02-03 06:04:46+00:00,https://github.com/BatchGradeTeam/Group-3/commit/2f1027d37d1208b823302bf81b7dcbf8268f6ce2,2026-02-03,1
+repo_mining/Kosuke_authorsFileTouches.py,e2c2e5fb81a6eaf9e2c8b1d75b4eae878bfe88c6,lAmKosuke,2026-02-03 06:03:46+00:00,https://github.com/BatchGradeTeam/Group-3/commit/e2c2e5fb81a6eaf9e2c8b1d75b4eae878bfe88c6,2026-02-03,1
+repo_mining/Kosuke_authorsFileTouches.py,c04e37fbd52922c23b2bcfd74c2e7ce932f58a73,lAmKosuke,2026-02-03 05:32:01+00:00,https://github.com/BatchGradeTeam/Group-3/commit/c04e37fbd52922c23b2bcfd74c2e7ce932f58a73,2026-02-03,1
+repo_mining/Kosuke_authorsFileTouches.py,1c349e82dd0e59c82e19529c7bba65f8b0f52108,lAmKosuke,2026-02-03 03:35:00+00:00,https://github.com/BatchGradeTeam/Group-3/commit/1c349e82dd0e59c82e19529c7bba65f8b0f52108,2026-02-03,1
+repo_mining/Kosuke_scatterplot.py,2f1027d37d1208b823302bf81b7dcbf8268f6ce2,lAmKosuke,2026-02-03 06:04:46+00:00,https://github.com/BatchGradeTeam/Group-3/commit/2f1027d37d1208b823302bf81b7dcbf8268f6ce2,2026-02-03,1
+repo_mining/Kosuke_scatterplot.py,e2c2e5fb81a6eaf9e2c8b1d75b4eae878bfe88c6,lAmKosuke,2026-02-03 06:03:46+00:00,https://github.com/BatchGradeTeam/Group-3/commit/e2c2e5fb81a6eaf9e2c8b1d75b4eae878bfe88c6,2026-02-03,1
+repo_mining/Kosuke_scatterplot.py,914bd90209371677bf1e302e04e2a43879895bd6,lAmKosuke,2026-02-03 05:56:06+00:00,https://github.com/BatchGradeTeam/Group-3/commit/914bd90209371677bf1e302e04e2a43879895bd6,2026-02-03,1
+repo_mining/Kosuke_scatterplot.py,915e6aa00f290647e4d5f9149489e76405a3e79a,lAmKosuke,2026-02-03 05:50:21+00:00,https://github.com/BatchGradeTeam/Group-3/commit/915e6aa00f290647e4d5f9149489e76405a3e79a,2026-02-03,1
+repo_mining/Kosuke_scatterplot.py,1c349e82dd0e59c82e19529c7bba65f8b0f52108,lAmKosuke,2026-02-03 03:35:00+00:00,https://github.com/BatchGradeTeam/Group-3/commit/1c349e82dd0e59c82e19529c7bba65f8b0f52108,2026-02-03,1
+repo_mining/Nicholas_CollectFiles.py,818ebafb2b8f60c6d8bd2dc3225c6693c4db37d4,NicholasAMartinez,2026-02-03 05:55:02+00:00,https://github.com/BatchGradeTeam/Group-3/commit/818ebafb2b8f60c6d8bd2dc3225c6693c4db37d4,2026-02-03,1
+repo_mining/Nicholas_CollectFiles.py,2061a5322f35b1d6038d177f6bdc516333bc3912,NicholasAMartinez,2026-02-03 02:55:26+00:00,https://github.com/BatchGradeTeam/Group-3/commit/2061a5322f35b1d6038d177f6bdc516333bc3912,2026-02-03,1
+repo_mining/Nicholas_CollectFiles.py,c3c0476b7560fa665fbc7f65f318d0c8cb93b5cb,NicholasAMartinez,2026-02-02 06:04:19+00:00,https://github.com/BatchGradeTeam/Group-3/commit/c3c0476b7560fa665fbc7f65f318d0c8cb93b5cb,2026-01-27,0
+repo_mining/Nicholas_CollectFiles.py,38969e67e5297e187ef1085459ffbf1e10e361a2,NicholasAMartinez,2026-02-02 03:56:36+00:00,https://github.com/BatchGradeTeam/Group-3/commit/38969e67e5297e187ef1085459ffbf1e10e361a2,2026-01-27,0
+repo_mining/Nicholas_authorsFileTouches.py,818ebafb2b8f60c6d8bd2dc3225c6693c4db37d4,NicholasAMartinez,2026-02-03 05:55:02+00:00,https://github.com/BatchGradeTeam/Group-3/commit/818ebafb2b8f60c6d8bd2dc3225c6693c4db37d4,2026-02-03,1
+repo_mining/Nicholas_authorsFileTouches.py,2061a5322f35b1d6038d177f6bdc516333bc3912,NicholasAMartinez,2026-02-03 02:55:26+00:00,https://github.com/BatchGradeTeam/Group-3/commit/2061a5322f35b1d6038d177f6bdc516333bc3912,2026-02-03,1
+repo_mining/Nicholas_authorsFileTouches.py,d57100105a2a39bfe6671e805c9202d73685f342,NicholasAMartinez,2026-02-03 02:51:39+00:00,https://github.com/BatchGradeTeam/Group-3/commit/d57100105a2a39bfe6671e805c9202d73685f342,2026-02-03,1
+repo_mining/Nicholas_authorsFileTouches.py,e3222d62053587d9b8b23c7817b3917de1c13ea8,NicholasAMartinez,2026-02-03 02:50:16+00:00,https://github.com/BatchGradeTeam/Group-3/commit/e3222d62053587d9b8b23c7817b3917de1c13ea8,2026-02-03,1
+repo_mining/Nicholas_authorsFileTouches.py,c3c0476b7560fa665fbc7f65f318d0c8cb93b5cb,NicholasAMartinez,2026-02-02 06:04:19+00:00,https://github.com/BatchGradeTeam/Group-3/commit/c3c0476b7560fa665fbc7f65f318d0c8cb93b5cb,2026-01-27,0
+repo_mining/Nicholas_scatterplot.py,7729712f5f9d52622f889428526905cd5c9a934b,NicholasAMartinez,2026-02-03 04:59:03+00:00,https://github.com/BatchGradeTeam/Group-3/commit/7729712f5f9d52622f889428526905cd5c9a934b,2026-02-03,1
+repo_mining/Nicholas_scatterplot.py,99a6ed98c9868af93049585b431a6f113af33582,NicholasAMartinez,2026-02-03 04:57:59+00:00,https://github.com/BatchGradeTeam/Group-3/commit/99a6ed98c9868af93049585b431a6f113af33582,2026-02-03,1
+repo_mining/Nicholas_scatterplot.py,48df217958a684824d075f4d754228b890da3ac2,NicholasAMartinez,2026-02-03 04:46:50+00:00,https://github.com/BatchGradeTeam/Group-3/commit/48df217958a684824d075f4d754228b890da3ac2,2026-02-03,1
+repo_mining/Nicholas_scatterplot.py,e3222d62053587d9b8b23c7817b3917de1c13ea8,NicholasAMartinez,2026-02-03 02:50:16+00:00,https://github.com/BatchGradeTeam/Group-3/commit/e3222d62053587d9b8b23c7817b3917de1c13ea8,2026-02-03,1
+repo_mining/Nicholas_scatterplot.py,c3c0476b7560fa665fbc7f65f318d0c8cb93b5cb,NicholasAMartinez,2026-02-02 06:04:19+00:00,https://github.com/BatchGradeTeam/Group-3/commit/c3c0476b7560fa665fbc7f65f318d0c8cb93b5cb,2026-01-27,0
+repo_mining/TriTran_CollectFiles.py,4b95af04d22b4e075a65974b64e8ec696fec74ba,trant98,2026-02-03 00:53:21+00:00,https://github.com/BatchGradeTeam/Group-3/commit/4b95af04d22b4e075a65974b64e8ec696fec74ba,2026-02-03,1
+repo_mining/Tri_authorsFileTouches.py,c5be537977fe85a163e8c785970e456783b1fa66,trant98,2026-02-03 01:02:04+00:00,https://github.com/BatchGradeTeam/Group-3/commit/c5be537977fe85a163e8c785970e456783b1fa66,2026-02-03,1
+repo_mining/Tri_authorsFileTouches.py,4b95af04d22b4e075a65974b64e8ec696fec74ba,trant98,2026-02-03 00:53:21+00:00,https://github.com/BatchGradeTeam/Group-3/commit/4b95af04d22b4e075a65974b64e8ec696fec74ba,2026-02-03,1
+repo_mining/Tri_scatterplot.py,4b95af04d22b4e075a65974b64e8ec696fec74ba,trant98,2026-02-03 00:53:21+00:00,https://github.com/BatchGradeTeam/Group-3/commit/4b95af04d22b4e075a65974b64e8ec696fec74ba,2026-02-03,1
+repo_mining/TrucBui_CollectFiles.py,476d477dc758135fc51d61ff86c1da1e4929e44b,buit7,2026-02-03 00:53:58+00:00,https://github.com/BatchGradeTeam/Group-3/commit/476d477dc758135fc51d61ff86c1da1e4929e44b,2026-02-03,1
+repo_mining/Truc_authorsFileTouches.py,476d477dc758135fc51d61ff86c1da1e4929e44b,buit7,2026-02-03 00:53:58+00:00,https://github.com/BatchGradeTeam/Group-3/commit/476d477dc758135fc51d61ff86c1da1e4929e44b,2026-02-03,1
+repo_mining/Truc_scatterplot.py,476d477dc758135fc51d61ff86c1da1e4929e44b,buit7,2026-02-03 00:53:58+00:00,https://github.com/BatchGradeTeam/Group-3/commit/476d477dc758135fc51d61ff86c1da1e4929e44b,2026-02-03,1
+>>>>>>> mine_repository
