@@ -277,3 +277,58 @@ class TestCounterEndpoints:
         assert response.status_code == HTTPStatus.BAD_REQUEST
 
         # TODO: Add an assertion to verify the error message specifically says 'Invalid counter name'S
+
+    def test_edge_case_behaviors(self, client):
+        """Combined edge-case test: validation, totals, ordering, thresholds, idempotence."""
+        # start from a known clean state
+        client.post('/counters/reset')
+
+        # invalid name should return a clear error
+        r = client.post('/counters/!badname')
+        assert r.status_code == HTTPStatus.BAD_REQUEST
+        assert 'invalid counter name' in r.get_json().get('error', '').lower()
+
+        # create counters and set values
+        client.post('/counters/a')
+        client.post('/counters/b')
+        client.post('/counters/c')
+
+        client.put('/counters/a/set/2')
+        client.put('/counters/b/set/2')
+        client.put('/counters/c/set/1')
+
+        # total should be the sum of values
+        r = client.get('/counters/total')
+        assert r.status_code == HTTPStatus.OK
+        assert r.get_json().get('total') == 5
+
+        # top 2 should be 'a' and 'b' (both value=2) preserving insertion order
+        r = client.get('/counters/top/2')
+        assert r.status_code == HTTPStatus.OK
+        top_keys = list(r.get_json().keys())
+        assert top_keys == ['a', 'b']
+
+        # bottom 1 should be 'c'
+        r = client.get('/counters/bottom/1')
+        assert r.status_code == HTTPStatus.OK
+        assert list(r.get_json().keys()) == ['c']
+
+        # thresholds are exclusive: greater than 2 should exclude values equal to 2
+        r = client.get('/counters/greater/2')
+        assert r.status_code == HTTPStatus.OK
+        assert r.get_json() == {}
+
+        # less than 2 should return only 'c'
+        r = client.get('/counters/less/2')
+        assert r.status_code == HTTPStatus.OK
+        assert list(r.get_json().keys()) == ['c']
+
+        # setting to the same value is idempotent
+        r = client.put('/counters/a/set/2')
+        assert r.status_code == HTTPStatus.OK
+        assert r.get_json() == {'a': 2}
+
+        # negative values are rejected with a clear message
+        r = client.put('/counters/a/set/-1')
+        assert r.status_code == HTTPStatus.BAD_REQUEST
+        assert 'cannot be negative' in r.get_json().get('error', '').lower()
