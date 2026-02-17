@@ -277,3 +277,28 @@ class TestCounterEndpoints:
         assert response.status_code == HTTPStatus.BAD_REQUEST
 
         # TODO: Add an assertion to verify the error message specifically says 'Invalid counter name'S
+
+# Test: Rest all counters
+# AUthor: Alvin Singo
+# Date: 2026-02-16
+# Description: Added unit test for resetting all counters to ensure 
+# the functionality works as expected.
+def test_reset_all_counters_artifacts(client):
+    # make counters
+    assert client.post("/counters/test1").status_code == HTTPStatus.CREATED
+    assert client.post("/counters/test2").status_code == HTTPStatus.CREATED
+
+    client.put("/counters/test1")  # Increment test1
+    client.put("/counters/test2")  # Increment test2
+
+    # Reset all counters
+    response = client.post("/counters/reset")
+    assert response.status_code == HTTPStatus.OK
+
+    # Verify all counters are reset
+    response = client.get("/counters")
+    assert response.status_code == HTTPStatus.OK
+
+    # Both counters should be reset to 0
+    assert client.get("/counters/test1").status_code == HTTPStatus.NOT_FOUND
+    assert client.get("/counters/test2").status_code == HTTPStatus.NOT_FOUND
