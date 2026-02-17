@@ -274,5 +274,5 @@ class TestCounterEndpoints:
         """It should prevent creating counters with special characters"""
         response = client.post('/counters/test@123')
 
-        assert response.status_code == HTTPStatus.OK
+        assert response.status_code == HTTPStatus.BAD_REQUEST
         assert response.get_json()["error"] == "Invalid counter name"
