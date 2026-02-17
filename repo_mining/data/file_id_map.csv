@@ -1,0 +1,17 @@
+file_id,file_path
+0,app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt
+1,app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.kt
+2,app/src/main/java/com/scottyab/rootbeer/sample/RootItemResult.kt
+3,app/src/main/java/com/scottyab/rootbeer/sample/RootSampleApp.kt
+4,app/src/main/java/com/scottyab/rootbeer/sample/extensions/ViewExtensions.kt
+5,app/src/main/java/com/scottyab/rootbeer/sample/ui/ResultIconView.kt
+6,app/src/main/java/com/scottyab/rootbeer/sample/ui/RootItemAdapter.kt
+7,app/src/main/java/com/scottyab/rootbeer/sample/ui/RootedResultTextView.kt
+8,app/src/main/java/com/scottyab/rootbeer/sample/ui/ScopedActivity.kt
+9,rootbeerlib/src/main/cpp/toolChecker.cpp
+10,rootbeerlib/src/main/cpp/toolChecker.h
+11,rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java
+12,rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java
+13,rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java
+14,rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java
+15,rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java

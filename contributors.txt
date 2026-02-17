@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Nicholas Martinez martin73@unlv.nevada.edu
 Alex Villegas villea7@unlv.nevada.edu
 Scott T. Koss kosss2@unlv.nevada.edu
@@ -7,3 +8,8 @@ Joshua Choi choij47@unlv.nevada.edu
 Jerome Azicate azicaj1@unlv.nevada.edu
 Tri Tran trant53@unlv.nevada.edu
 Kosuke Carlson carlsk4@unlv.nevada.edu 
+=======
+Nicholas Martinez martin73@unlv.nevada.edu
+Alex Villegas villea7@unlv.nevada.edu
+Scott T. Koss kosss@unlv.nevada.edu
+>>>>>>> mine_repository
