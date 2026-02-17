@@ -1,0 +1,49 @@
+name: CI Workflow  # Name of the workflow
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+    defaults:
+      run:
+        working-directory: ci_lab  # Set the default working directory for all steps
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"  # Ensure consistency in Python version
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Tests with Pytest
+        run: pytest --cov=src --cov-report=term-missing
+
+      - name: Install Flake8
+        run: pip install flake8
+
+      - name: Run Flake8 Linting
+        run: flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      # Enhancement #8: Notifications
+      - name: Post CI Status as a Comment on the PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v8
+        with: # Post a comment on the PR with the CI status automatically
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const status = "${{ job.status }}";
+
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: prNumber,
+              body: `CI checks status: ${status}`;
+            });
