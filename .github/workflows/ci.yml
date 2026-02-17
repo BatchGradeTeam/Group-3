@@ -35,7 +35,7 @@ jobs:
 
       # Enhancement #8: Notifications
       - name: Post CI Status as a Comment on the PR
-        if: github.event_name == 'pull_request'
+        if: always() && github.event_name == 'pull_request'
         uses: actions/github-script@v8
         with: # Post a comment on the PR with the CI status automatically
           script: |
