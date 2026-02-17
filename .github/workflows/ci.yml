@@ -46,20 +46,20 @@ jobs:
               await github.rest.issues.createComment({
                 ...context.repo,
                 issue_number: prNumber,
-                body: 'CI checks passed.
+                body: 'CI checks passed.'
               });
             }
             else if (status === 'failure') {
               await github.rest.issues.createComment({
                 ...context.repo,
                 issue_number: prNumber,
-                body: 'CI checks failed.
+                body: 'CI checks failed.'
               });
             }
             else {
               await github.rest.issues.createComment({
                 ...context.repo,
                 issue_number: prNumber,
-                body: `CI checks completed with status: ${status}.
+                body: `CI checks completed with status: ${status}.`
               });
             }
