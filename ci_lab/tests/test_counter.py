@@ -299,6 +299,6 @@ def test_reset_all_counters_artifacts(client):
     response = client.get("/counters")
     assert response.status_code == HTTPStatus.OK
 
-    # Both counters should be reset to 0
+    # Both counters should be reset
     assert client.get("/counters/test1").status_code == HTTPStatus.NOT_FOUND
     assert client.get("/counters/test2").status_code == HTTPStatus.NOT_FOUND
