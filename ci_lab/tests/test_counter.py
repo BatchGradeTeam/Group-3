@@ -267,7 +267,7 @@ class TestCounterEndpoints:
 
     # ===========================
     # Test: Validate counter names (prevent special characters)
-    # Author: Student 11
+    # Author: Joshua Choi
     # Modification: Ensure error message is specific.
     # ===========================
     def test_validate_counter_name(self, client):
