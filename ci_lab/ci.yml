@@ -32,3 +32,35 @@ jobs:
 
       - name: Run Flake8 Linting
         run: flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      # Enhancement #8: Notifications
+      - name: Post CI Status as a Comment on the PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v8
+        with: # Post a comment on the PR with the CI status automatically
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const status = "${{ job.status }}";
+
+            if (status === 'failure'){
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: prNumber,
+                body: 'CI checks status: failed'
+              });
+            }
+            else if (status === 'success'){
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: prNumber,
+                body: 'CI checks status: passed'
+              });
+            }
+            else {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: prNumber,
+                body: `CI checks status: ${status}`
+              });
+            }
+          
