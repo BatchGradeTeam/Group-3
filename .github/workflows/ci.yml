@@ -36,7 +36,7 @@ jobs:
       # Enhancement #8: Notifications
       - name: Post CI Status as a Comment on the PR
         if: always() && github.event_name == 'pull_request'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v7
         with:
           script: |
             const github = require('@actions/github');
