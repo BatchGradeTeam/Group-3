@@ -37,14 +37,16 @@ jobs:
       - name: Post CI Status as a Comment on the PR
         if: always() && github.event_name == 'pull_request'
         uses: actions/github-script@v8
-        with: # Post a comment on the PR with the CI status automatically
+        with:
           script: |
+            const github = require('@actions/github');
+            const context = github.context;
+
             const prNumber = context.payload.pull_request.number;
             const status = "${{ job.status }}";
 
             await github.rest.issues.createComment({
               ...context.repo,
               issue_number: prNumber,
-              body: `CI checks status: ${status}`;
+              body: `CI checks status: ${status}`
             });
-
