@@ -228,7 +228,11 @@ class TestCounterEndpoints:
         assert response.status_code == HTTPStatus.OK
         assert isinstance(response.get_json()["count"], int)  
 
+        # ===========================
+        # Author: Jerome Azicate
+        # ===========================
         # TODO: Add an assertion to check the exact count value
+        assert response.get_json()["count"] == 2
 
     # ===========================
     # Test: Retrieve counters with values greater than a threshold
@@ -277,3 +281,39 @@ class TestCounterEndpoints:
         assert response.status_code == HTTPStatus.BAD_REQUEST
 
         # TODO: Add an assertion to verify the error message specifically says 'Invalid counter name'S
+        
+    # ===========================
+    # Test: Retrieve top N counters when no counters exist
+    # Author: Jerome Azicate
+    # Modification: Ensure the error message is clear about no counters being available.
+    # ===========================
+    def test_top_n_counters_with_no_counters(self, client):
+        """It should return 404 for top N counters when no counters exist"""
+        client.post('/counters/reset')
+        
+        response = client.get('/counters/top/3')
+        
+        assert response.status_code == HTTPStatus.NOT_FOUND
+        
+        data = response.get_json()
+        assert "error" in data
+        assert "No counters available" in data["error"]
+        # assert "No counters available" in response.get_json()["error"]
+    
+    # ===========================
+    # Test: Retrieve bottom N counters when no counters exist
+    # Author: Jerome Azicate
+    # Modification: Ensure the error message is clear about no counters being available.
+    # ===========================
+    def test_bottom_n_counters_with_no_counters(self, client):
+        """It should return 404 for bottom N counters when no counters exist"""
+        client.post('/counters/reset')
+        
+        response = client.get('/counters/bottom/3')
+        
+        assert response.status_code == HTTPStatus.NOT_FOUND
+        
+        data = response.get_json()
+        assert "error" in data
+        assert "No counters available" in data["error"]
+        
